@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background-color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TOPO */
+.topo {
+  border-bottom: 2px solid black;
+  padding: 5px 10px; /* diminui o espaço interno */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.logo {
+  height: 100px; /* diminui o tamanho da logo */
+}
+
+/* MENU */
+.menu {
+  background-color: #222;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* CONTEÚDO */
+.conteudo {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  flex: 1; /* ocupa o espaço restante */
+}
+
+.coluna-esquerda,
+.coluna-central,
+.coluna-direita {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.coluna-esquerda {
+  width: 20%;
+}
+
+.coluna-central {
+  width: 50%;
+}
+
+.coluna-direita {
+  width: 30%;
+}
+
+.foto-aluno {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* RODAPÉ */
+.rodape {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* empurra o footer para o final */
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .conteudo {
+    flex-direction: column;
+  }
+
+  .coluna-esquerda,
+  .coluna-central,
+  .coluna-direita {
+    width: 100%;
+  }
+}
