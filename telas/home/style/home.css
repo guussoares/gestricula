@@ -40,13 +40,13 @@ html, body {
 }
 
 .menu {
-  background-color: #222;
+  background-color: #379090;
   padding: 10px;
   display: flex;
   justify-content: space-around;
 }
 
-.menu a {
+.menu a { 
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -58,8 +58,8 @@ html, body {
 }
 
 .rodape {
-  background-color: #222;
-  color: white;
+  background-color: #379090;
+  color: rgb(196, 7, 7);
   text-align: center;
   padding: 10px;
   margin-top: auto;

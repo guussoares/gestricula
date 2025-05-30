@@ -1,3 +1,11 @@
+<?php
+session_start();
+// Se não estiver autenticado, redireciona ao login
+if (!isset($_SESSION['usuario'])) {
+    header('Location: /PI/telas/login/login.html');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,8 +13,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sistema Escolar - Tela Principal</title>
-  <link rel="stylesheet" href="style/home.css" />
-  <script src="js/script.js" defer></script>
+  <link rel="stylesheet" href="/PI/telas/home/style/home.css" />
+  <script src="/PI/telas/home/js/script.js" defer></script>
 </head>
 
 <body>
@@ -21,19 +29,24 @@
       </svg>
     </div>
     <div class="logo-container">
-      <img src="imgs/logosanquim.webp" alt="Logo da Escola" class="logo" />
+      <img src="/PI/telas/home/imgs/logosanquim.webp" alt="Logo da Escola" class="logo" />
     </div>
   </header>
 
   <nav class="menu">
-    <a href="#">INÍCIO</a>
-    <a href="#">DIÁRIO</a>
-    <a href="#">MENÇÕES</a>
-    <a href="#">PROFESSORES</a>
-    <a href="#">CADASTRO</a>
-    <a href="#">REMATRÍCULA</a>
-    <a href="#">SAIR</a>
+    <a href="/PI/telas/home/home.php">INÍCIO</a>
+    <a href="/PI/telas/diario/diario.php">DIÁRIO</a>
+    <a href="/PI/telas/mencoes/mencoes.php">MENÇÕES</a>
+    <a href="/PI/telas/professores/professores.php">PROFESSORES</a>
+    <a href="/PI/telas/cadastro/cadastro.php">CADASTRO</a>
+    <a href="/PI/telas/rematricula/rematricula.php">REMATRÍCULA</a>
+    <a href="/PI/src/controllers/logout.php" class="logout">SAIR</a>
   </nav>
+
+  <main>
+    <h1>Bem-vindo, <?php echo htmlspecialchars($_SESSION['usuario']); ?>!</h1>
+    <!-- Conteúdo específico da home -->
+  </main>
 
   <footer class="rodape">
     <p>&copy; 2025 Sanquim. Todos os direitos reservados.</p>

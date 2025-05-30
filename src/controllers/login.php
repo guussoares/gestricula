@@ -1,14 +1,10 @@
 <?php
+header('Content-Type: application/json');
 session_start();
-require_once("../db/conexao.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . '/PI/db/conexao.php'); 
 
-if (empty($_POST['email']) || empty($_POST['senha'])) {
-    echo "Por favor, preencha email e senha.";
-    exit();
-}
-
-$email = $_POST['email'];
-$senha = hash("sha256", $_POST['senha']);
+$email = $_POST['email'] ?? '';
+$senha = hash("sha256", $_POST['senha'] ?? '');
 
 $sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
 $stmt = $conn->prepare($sql);
@@ -18,9 +14,8 @@ $stmt->store_result();
 
 if ($stmt->num_rows === 1) {
     $_SESSION['usuario'] = $email;
-    header("Location: ../telas/home/index.html"); // ajuste para sua estrutura!
-    exit();
+    echo json_encode(['sucesso' => true]);
 } else {
-    echo "Login inválido!";
+    echo json_encode(['sucesso' => false, 'mensagem' => 'Login ou senha inválidos!']);
 }
 ?>
