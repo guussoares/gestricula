@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sistema Escolar - Tela Principal</title>
   <link rel="stylesheet" href="style/home.css" />
+  <script src="js/script.js" defer></script>
 </head>
+
 <body>
 
-  <!-- TOPO COM LOGO -->
   <header class="topo">
-    <img src="imgs/logogest-removebg-preview.png" alt="Logo da Escola" class="logo" />
+    <div class="onda-topo">
+      <svg width="100%" height="250px" viewBox="0 0 1440 250" xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none">
+        <path fill="#ffc544" d="M0,0 C300,100 1140,0 1440,100 L1440,0 L0,0 Z"></path>
+        <path fill="#ffd984" d="M0,100 C400,200 1040,50 1440,150 L1440,0 L0,0 Z" opacity="0.8"></path>
+        <path fill="#ffc544" d="M0,150 C500,250 940,150 1440,200 L1440,0 L0,0 Z" opacity="0.3"></path>
+      </svg>
+    </div>
+    <div class="logo-container">
+      <img src="imgs/logosanquim.webp" alt="Logo da Escola" class="logo" />
+    </div>
   </header>
 
-  <!-- MENU PRINCIPAL -->
   <nav class="menu">
     <a href="#">INÍCIO</a>
     <a href="#">DIÁRIO</a>
@@ -24,10 +35,10 @@
     <a href="#">SAIR</a>
   </nav>
 
-  <!-- RODAPÉ -->
   <footer class="rodape">
     <p>&copy; 2025 Sanquim. Todos os direitos reservados.</p>
   </footer>
 
 </body>
+
 </html>
