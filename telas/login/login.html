@@ -1,18 +1,15 @@
 <!-- Localização: C:/xampp/htdocs/PI/telas/login/login.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Colégio Sanquim – Login</title>
   <link rel="stylesheet" href="/PI/telas/login/css/styleindex.css" />
 </head>
-<body>
-  <nav>
-    <!-- CORRIGIDO: Agora aponta para home.php -->
-    <a href="/PI/telas/home/home.php" class="home">Home</a>
-  </nav>
 
+<body>
   <div class="onda-topo">
     <svg width="100%" height="250px" viewBox="0 0 1440 250" preserveAspectRatio="none">
       <path fill="#ffc544" d="M0,0 C300,100 1140,0 1440,100 L1440,0 L0,0 Z"></path>
@@ -23,21 +20,25 @@
 
   <main>
     <form id="loginForm" class="form-log" action="/PI/src/controllers/login.php" method="post" novalidate>
-      <div style="padding: 15px; text-align: center;">
+
         <img src="/PI/telas/login/img/logosanquim.webp" alt="Logo Sanquim" width="200" />
-      </div>
       <h1>LOGAR</h1>
       <p>Coloque suas credenciais para entrar</p>
 
       <input type="email" id="usuario" name="email" required placeholder="Email" />
       <input type="password" id="senha" name="senha" required placeholder="Senha" />
-      
-      <div id="erro-senha" style="color: red; margin-top: 5px; min-height: 1.2em;"></div>
-      
+
+
+
+
       <button type="submit" class="btn">Entrar</button>
+  
+        <a href="/PI/telas/login/recuperar-senha.html">Recuperar Senha</a>
+     
     </form>
   </main>
 
   <script src="/PI/js/login.js"></script>
 </body>
+
 </html>
