@@ -46,7 +46,7 @@
         </svg>
     </div>
     <div class="centro">
-        <h2>Cadastro</h2>
+        <h2>Cadastro do Tipo de Usuário</h2>
         <div style="margin-bottom: 24px;">
             <label for="tipo_cadastro"><strong>Tipo de Cadastro:</strong></label>
             <select id="tipo_cadastro" name="tipo_cadastro" onchange="mostrarFormulario()">
@@ -150,7 +150,6 @@
             <button type="submit">Salvar</button>
         </form>
 
-        <!-- Formulário de Usuário -->
         <form id="form-usuario" style="display:none;">
             <h3>Cadastro de Usuário</h3>
             <div class="form-row">
@@ -331,7 +330,6 @@
         </form>
     </div>
     <script>
-        // Exibe o formulário correto ao recarregar a página se já houver valor selecionado
         window.onload = function() {
             mostrarFormulario();
         }
